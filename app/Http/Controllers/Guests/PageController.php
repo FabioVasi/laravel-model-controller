@@ -9,8 +9,10 @@ class PageController extends Controller
 {
     public function index()
     {
-        //dd(Movie::all());
 
-        return view('home', ['movies' => Movie::all()]);
+        $posts = config('model.posts');
+
+        return view('home',compact('posts'), ['movies' => Movie::all()]);
+
     }
 }

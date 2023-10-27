@@ -8,6 +8,25 @@
 
 @section('content')
 
+    <section class="banner bg-secondary py-5">
+        <div class="container text-center">
+            <h2 class="py-3 fs-1 fw-bold">Upcoming Movies</h2>
+            <div class="row row-cols-5 g-3">
+                @forelse($posts as $i => $post)
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <img class="rounded-3" src="https://picsum.photos/400/200?random={{$i}}" alt="">
+                        </div>
+                    </div>
+                @empty
+                    <div class="col">
+                        <p>Sorry, we still have to write something</p>
+                    </div>
+                @endforelse
+            </div>
+        </div>
+    </section>
+
     <section class="bg-dark py-5">
 
         <div class="container text-center">
