@@ -21,11 +21,12 @@
                             </div>
                         </div>
                     </div>
-                @endforealse
+                @empty
+                    <p>nulla da vedere</p>    
+                @endforelse
             </div>
         </div>
-        
+
     </section>
     
-
 @endsection
