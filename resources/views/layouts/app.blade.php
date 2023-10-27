@@ -17,9 +17,13 @@
 
 <body>
 
-    <main class="">
+    @include('partials.header')
+
+    <main id="site_main" class="">
         @yield('content')
     </main>
+
+    @include('partials.footer')
 
 </body>
 
